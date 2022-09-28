@@ -6,10 +6,18 @@ import { SharedModule } from './core/shared/shared.module';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AppWrapperComponent } from './app-wrapper/app-wrapper.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppWrapperComponent,
+    HeaderComponent,
+    FooterComponent,
+    FavoritesComponent
   ],
   imports: [
     SharedModule,
