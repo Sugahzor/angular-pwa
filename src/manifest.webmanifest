@@ -1,6 +1,6 @@
 {
-  "name": "angular-PWA",
-  "short_name": "angular-PWA",
+  "name": "Where Are You",
+  "short_name": "WAY",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

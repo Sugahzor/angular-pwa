@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngxs/store';
+import { GetFavorites } from 'src/redux/favorites.actions';
 
 @Component({
   selector: 'app-app-wrapper',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppWrapperComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
+    this.store.dispatch(new GetFavorites());
   }
 
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { tap } from 'rxjs/operators';
+import { IFavorite } from 'src/app/core/shared/models/favorites-model.model';
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +11,8 @@ export class FavoritesService {
 
   constructor(private http: HttpClient) { }
 
-  getFavorites(): Observable<any> {
-    return this.http.get<any>(this.rootUrl)
-      .pipe(
-        tap((response: any) => console.log(response, "favorite restaurants"))
-      );
+  getFavorites(): Observable<IFavorite[]> {
+    //TODO: map response here; investigate why BE array response becomes object
+    return this.http.get<IFavorite[]>(this.rootUrl);
   }
 }
