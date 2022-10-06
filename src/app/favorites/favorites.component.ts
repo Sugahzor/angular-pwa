@@ -1,7 +1,7 @@
 import { IFavorite } from './../core/shared/models/favorites-model.model';
 import { Observable } from 'rxjs';
 import { FavoritesState } from './../../redux/favorites.state';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Select } from '@ngxs/store';
 import { BaseComponent } from '../core/shared/base/base.component';
 import { filter, takeUntil } from 'rxjs/operators';
@@ -10,7 +10,8 @@ import { FiltersUtil } from '../core/shared/utils/filters.util';
 @Component({
   selector: 'app-favorites',
   templateUrl: './favorites.component.html',
-  styleUrls: ['./favorites.component.scss']
+  styleUrls: ['./favorites.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class FavoritesComponent extends BaseComponent implements OnInit {
@@ -22,6 +23,13 @@ export class FavoritesComponent extends BaseComponent implements OnInit {
   }
   ngOnInit(): void {
     this.initFavoritesResponse();
+  }
+
+  imageUrlForFavorite(favorite: IFavorite) {
+    if (!favorite.photograph) {
+      favorite.photograph = favorite.id;
+    }
+    return `../../assets/img/${favorite.photograph}.webp`;
   }
 
   private initFavoritesResponse() {

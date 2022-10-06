@@ -1,7 +1,7 @@
 export interface IFavorite {
   name: string;
   neighborhood: string;
-  photograph: 1;
+  photograph: number;
   address: string;
   latlng: ICoordinates
   cuisine_type: string;

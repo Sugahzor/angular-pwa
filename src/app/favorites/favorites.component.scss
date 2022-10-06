@@ -1,0 +1,37 @@
+app-favorites {
+  section {
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .red {
+    color: red;
+  }
+  .favorites-list {
+    width: 80%;
+    justify-content: space-between;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #f3f3f3;
+
+    mat-card {
+      width: calc(33% - 24px);
+      background-color: #ffffff;
+      border: 2px solid #cccccc;
+      margin: 10px;
+      min-height: 380px;
+      text-align: center;
+    }
+    mat-card-header {
+      display: block;
+    }
+
+    .favorite-img {
+      background-color: #cccccc;
+      display: block;
+      margin: 0;
+      max-width: 100%;
+      min-width: 100%;
+      border-bottom: 2px solid #cccccc;
+    }
+  }
+}
