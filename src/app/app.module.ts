@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { appStates } from 'src/redux/app.state';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { appStates } from 'src/redux/app.state';
     AppWrapperComponent,
     HeaderComponent,
     FooterComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    HomeComponent
   ],
   imports: [
     SharedModule,
